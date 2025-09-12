@@ -20,7 +20,7 @@ function App() {
 
  <div >
    <Navbar/>
-    <div style={{display:"flex", flexDirection:"column", alignItems:"center",justifyContent:"space-between",gap:"5rem"}}> 
+    <div style={{display:"flex", flexDirection:"column", alignItems:"center",justifyContent:"space-between",gap:"7rem"}}> 
 
     <QRGenerator/>
      

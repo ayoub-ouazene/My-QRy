@@ -5,6 +5,24 @@ import './Navbar.css'
 const Navbar = () => {
 
     const [selected , SetSelected ] = useState(1);
+    const [scroll , setScrooll ] = useState(false);
+
+    const handleScroll = ()=>{
+        if(window.scrollY > 80)
+        {
+            setScrooll(true);
+        }
+        else
+        {
+           setScrooll(false);
+        }
+    }
+
+
+    window.addEventListener('scroll',handleScroll);
+
+
+ 
 
     const handleSection1Clicked = ()=>{
         SetSelected(1);
@@ -18,7 +36,7 @@ const Navbar = () => {
 
 
     return(
-        <div className="navbar">
+        <div className={scroll?"navbar-scroll":"navbar"}>
             <div className="logoInfo">
                 <div className="logo"></div>
                 <div className="text">

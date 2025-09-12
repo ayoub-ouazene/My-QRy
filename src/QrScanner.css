@@ -1,67 +1,50 @@
-
 .container {
   display: flex;
   flex-direction: column;
-  
   gap: 2rem;
   padding: 3rem;
-  box-shadow: 0 0.25rem 0.75rem  #e5e7eb; /* 0 4px 12px */
+  box-shadow: 0 0.25rem 0.75rem #e5e7eb; /* 0 4px 12px */
   background-color: #ffffff;
-
   border-radius: 1rem;
   border: #e5e7eb solid 1px;
   width: 38rem;
-  height: 30rem;
-  
+  position: relative; /* ADDED: To properly contain all child elements */
+  /* REMOVED: height: 30rem; This was the main cause of the layout breaking */
 }
 
-
-.header3
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap:1.5rem;
-    color: #6c757d;
+.header3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  color: #6c757d;
 }
-.logo3
-{
-  background-color:#e5e7eb;
 
+.logo3 {
+  background-color: #e5e7eb;
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
- background-image: url("./assets/qr-code-new.svg");
- background-repeat: no-repeat;
- background-size: 50% 50%;
- background-position: center;
+  background-image: url("./assets/qr-code-new.svg");
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  background-position: center;
 }
 
-
-.header3 h1
-{
-   margin: 0;
-   color:#475569;
-   font-size: 2.6rem;
+.header3 h1 {
+  margin: 0;
+  color: #475569;
+  font-size: 2.6rem;
 }
 
-.header3 p 
-{
-    margin-top: 0.3rem;
-    font-size: 0.9rem;
+.header3 p {
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
 }
-
-
-
-
-
-
-
-
 
 .title {
-  margin-bottom: 1.5625rem; 
+  margin-bottom: 1.5625rem;
   color: #333;
 }
 
@@ -69,12 +52,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem; 
+  gap: 1.5rem;
 }
 
-.primaryButton1
-{
-  padding: 0.75rem 1.5rem; 
+.primaryButton1 {
+  padding: 0.75rem 1.5rem;
   font-size: 1rem; /* 16px */
   cursor: pointer;
   border: none;
@@ -89,20 +71,20 @@
   justify-content: center;
   gap: 0.3rem;
 }
-.primaryButton1 svg{
-    padding-bottom: 0.15rem;
+
+.primaryButton1 svg {
+  padding-bottom: 0.15rem;
 }
-.primaryButton2
-{
-  padding: 0.75rem 1.5rem; 
+
+.primaryButton2 {
+  padding: 0.75rem 1.5rem;
   font-size: 1rem; /* 16px */
   cursor: pointer;
   border: dashed 2px #475569;
   border-radius: 0.3125rem; /* 5px */
   background-color: transparent;
-  color:#475569;
- font-weight: bold;
-
+  color: #475569;
+  font-weight: bold;
   transition: background-color 0.3s;
   width: 90%;
   display: flex;
@@ -110,19 +92,17 @@
   justify-content: center;
   gap: 0.25rem;
 }
-.primaryButton1:hover
-{
-    background-color: #009f6a
-}
-.primaryButton2:hover
-{
 
-    border-color: #26a47a;
+.primaryButton1:hover {
+  background-color: #009f6a;
+}
+
+.primaryButton2:hover {
+  border-color: #26a47a;
 }
 
 .secondaryButton {
-  padding: 0.625rem 1.25rem; 
-
+  padding: 0.625rem 1.25rem;
   font-size: 0.875rem; /* 14px */
   cursor: pointer;
   border: 0.0625rem solid #6c757d; /* 1px */
@@ -132,105 +112,113 @@
   width: 50%;
   display: flex;
   justify-content: center;
-  margin-top: 1.25rem;
+  /* margin-top is now handled by gap in the container */
   transition: background-color 0.3s;
-  
-
 }
 
 .orText {
-
   color: #6c757d;
   font-weight: bold;
-  font-size: 0.9rem; 
+  font-size: 0.9rem;
 }
 
-
-
-.separator 
-{
-  display: flex;        
-  align-items: center;  
-  width: 92%; 
-           
+.separator {
+  display: flex;
+  align-items: center;
+  width: 92%;
 }
-
 
 .separator::before {
-  content: '';          
-  flex: 1;              
-  border-bottom: 0.0625rem solid #ccc; 
-  margin-right: 0.625rem; 
+  content: '';
+  flex: 1;
+  border-bottom: 0.0625rem solid #ccc;
+  margin-right: 0.625rem;
 }
-
 
 .separator::after {
   content: '';
-  flex: 1;               
-  border-bottom: 0.0625rem solid #ccc; 
-  margin-left: 0.625rem; 
-
+  flex: 1;
+  border-bottom: 0.0625rem solid #ccc;
+  margin-left: 0.625rem;
 }
 
 
+/* --- STYLES FOR CAMERA VIEW --- */
 
-.cameraReader {
+.BeforeStartContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* REFINED: Provides clean spacing between scanner and button */
+  /* REMOVED: margin-top: -1.5rem; No longer needed */
+}
+
+/* This targets the div with id="reader" */
+#reader {
   width: 100%;
-   border: 1px solid #26a47a;
-   outline: none;
-   box-shadow: 2px 2px 2px #e5e7eb;
-   border-radius: 0.45rem;
-   margin-top: 0;
-   
-}
-.cameraReader button
-{
-    background-color: #009f6a;
-    color: white;
-    padding:  0.5rem 1rem;
-    border-radius: 0.4rem;
-    border: none;
-    margin-bottom: 1.2rem;
-    margin-top: 0;
-    cursor: pointer;
-    width: 15rem;
-    font-size: large;
-}
-.cameraReader button:hover
-{
-    background-color: #26a47a;
+  border-radius: 0.75rem; /* Nicer rounded corners */
+  border: 1px solid #e5e7eb;
+  overflow: hidden; /* CRITICAL: Keeps the video inside the rounded corners */
+  position: relative; /* Good practice for containing child elements */
 }
 
-#reader_scan_region
-{
- 
-    
+/* This makes the actual video feed fill the #reader container */
+#reader video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Prevents video stretching */
 }
 
-#reader_dashboard
-{
-
-
+/* This styles the square scanning area and creates the dark overlay */
+#reader_scan_region {
+  border: 4px solid rgba(255, 255, 255, 0.7) !important;
+  box-shadow: 0 0 0 4000px rgba(0, 0, 0, 0.5); /* The dark overlay trick */
 }
 
-#html5-qrcode-anchor-scan-type-change
-{
-    font-size: 0.9rem;
-    text-decoration: none;
-    color: #475569;
-    font-weight: bold;
-
+/* This styles the dashboard with Start/Stop buttons created by the library */
+#reader_dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
+
+#reader_dashboard button {
+  background-color: #009f6a;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  max-width: 20rem;
+  font-size: large;
+  transition: background-color 0.2s;
+}
+
+#reader_dashboard button:hover {
+  background-color: #26a47a;
+}
+
+#html5-qrcode-anchor-scan-type-change {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #475569;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+
+/* --- RESULT & OTHER VIEWS --- */
 
 .resultContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 1.25rem; 
+  padding: 1.25rem;
   background-color: #f8f9fa;
   border-radius: 0.5rem; /* 8px */
-
 }
 
 .resultText {
@@ -238,7 +226,6 @@
   font-weight: bold;
   color: #28a745;
   margin: 0 0 2rem 0;
-
 }
 
 .resultLink {
@@ -249,42 +236,29 @@
 }
 
 .feedbackText {
-  font-size: 1.125rem; 
+  font-size: 1.125rem;
   color: #555;
+  min-height: 10rem; /* Give it some space while processing */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-.BeforeStartContainer
-{
-    display: flex;
-    margin-top: -1.5rem;
-    flex-direction: column;
-    align-items: center;
-    gap: 0rem;
-    
+.note {
+  color: #475569;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.note
-{
-    color: #475569;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
+.note h5 {
+  margin-bottom: 0;
+  margin-top: 1rem;
+  font-size: 1rem;
 }
 
-.note h5
-{
-    margin-bottom: 0;
-    margin-top: 1rem;
-    font-size: 1rem;
-
+.note p {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  color: #6c757d;
 }
-
-.note p
-{
-    font-size: 0.75rem;
-    margin-top: 0.5rem;
-    color: #6c757d;
-}
-

@@ -1,11 +1,10 @@
 
-.navbar
+.navbar , .navbar-scroll
 {
   position: fixed;
   top: 0;
   width: 100%;
   height: 4.5rem;
-  /* background-color: brown; */
   margin: 0;
   border-bottom : 1px solid #e5e7eb;
   border-top: 1px solid #e5e7eb;
@@ -13,10 +12,20 @@
   box-shadow: 2px 2px 2px #e5e7eb ;
   
   justify-content: space-between;
- 
+  z-index: 100;
 
 
 }
+
+.navbar-scroll
+{
+    background-color: rgba(255, 255, 255, 0.25);
+     backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(10px);
+
+}
+
+
 .logoInfo
 {
   display: flex;
@@ -58,9 +67,12 @@
 .text h2
 {
   margin: 0;
-  font-size: 1.7rem;
-  word-spacing: -0.2rem;
-  font-family: "Geist Mono", sans-serif;
+  font-size: 1.8rem;
+  /* word-spacing: 0.2rem; */
+  /* letter-spacing: 0.05rem; */
+  /* font-family: "Geist Mono", sans-serif; */
+  font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ 
   
  
 }
