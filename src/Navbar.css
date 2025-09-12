@@ -1,0 +1,114 @@
+
+.navbar
+{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 4.5rem;
+  /* background-color: brown; */
+  margin: 0;
+  border-bottom : 1px solid #e5e7eb;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  box-shadow: 2px 2px 2px #e5e7eb ;
+  
+  justify-content: space-between;
+ 
+
+
+}
+.logoInfo
+{
+  display: flex;
+  flex-direction: row;
+  margin-left: 4rem;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  
+}
+
+
+.logo
+{
+  background-color: #059669;
+  background-image: url('./assets/qr-code.svg');
+  background-repeat: no-repeat;
+  background-size: 65% 65%;
+  background-position: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 0.8rem;
+}
+
+.text
+{
+  color:#475569;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.text p
+{ 
+  margin: 0;
+   font-size: 0.8em;
+  
+}
+.text h2
+{
+  margin: 0;
+  font-size: 1.7rem;
+  word-spacing: -0.2rem;
+  font-family: "Geist Mono", sans-serif;
+  
+ 
+}
+
+.sections
+{
+    display: flex;
+    align-items: center;
+    color:#475569;
+    font-size: 1rem;
+    margin-right: 8rem;
+    font-weight: bold;
+
+}
+.sections-list
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 3.5rem;
+    list-style-type: none;
+    align-items: center;
+}
+
+.sections-list li:hover , .sections-list li a:hover
+{
+    color: #10b981;
+    cursor: pointer;
+}
+
+.section-style
+{
+    text-decoration: none;
+      color:#475569;
+}
+.selected-section-style
+{
+
+    text-decoration: none;
+      color:#059669;
+}
+
+
+
+
+
+
+
+
+
+
+

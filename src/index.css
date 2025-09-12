@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Sans:wght@400;500;600;700&display=swap');
+
+html
+{
+  font-size: 16px;
+  font-family: 'Geist Sans', sans-serif ;
+
+}
+
+body
+{
+  margin: 0;
+}

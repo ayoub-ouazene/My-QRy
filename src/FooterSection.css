@@ -1,0 +1,29 @@
+
+.footer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
+    border-top: 1px solid #ccc;
+    bottom: 0;
+
+}
+.footer p
+{
+    color: #374151;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+
+}
+.footer h2
+{
+    font-size: 2rem;
+    font-weight: lighter;
+    margin: 0;
+}

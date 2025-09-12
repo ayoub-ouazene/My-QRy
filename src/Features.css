@@ -1,0 +1,95 @@
+
+
+.Feature
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+   
+}
+
+.img1,.img2,.img3
+{ 
+  
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-color:#e5e7eb;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.img1
+{
+    background-image: url("./assets/qr-code-last-version.svg");
+        background-size: 55% 55%;
+}
+
+.img2
+{
+    background-image: url("./assets/camera.svg");
+        background-size: 55% 55%;
+}
+.img3
+{
+    background-image: url("./assets/download.svg");
+        background-size: 50% 50%;
+}
+
+.Feature h4
+{
+    color: #475569;
+    margin-bottom: 0.8rem;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+}
+.Feature p
+{
+    color:#616060;
+    margin-top: 0;
+   max-width: 18rem;
+   text-align: center;
+   font-size: 0.9rem;
+   font-weight: 500;
+}
+
+.Features
+{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.Features-Section
+{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.header4
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header4 h2
+{
+    margin-bottom: 0;
+    font-size: 2rem;
+    color: #475569;
+}
+
+.header4 p
+{
+    font-size: 0.9rem;
+    max-width: 25rem;
+    text-align: center;
+    color: #797373;
+}
