@@ -16,10 +16,13 @@ type QRImageSettings = {
 };
 
 
+interface QrProps {
+  id: string;
+}
 
 
 
-const QRGenerator = ()=>{
+const QRGenerator: React.FC<QrProps>  = ({id})=>{
 
 
     const TextToEncode = useRef<HTMLInputElement>(null);
@@ -119,7 +122,7 @@ const QRGenerator = ()=>{
 
 
     return (
- <div className="qrcode-generator-container" id = "qrcode-generator-Section">
+ <div className="qrcode-generator-container" id={id}>
     
       <div className="header">
 

@@ -22,11 +22,11 @@ function App() {
    <Navbar/>
     <div style={{display:"flex", flexDirection:"column", alignItems:"center",justifyContent:"space-between",gap:"7rem"}}> 
 
-    <QRGenerator/>
+    <QRGenerator id="qrcode-generator-Section"/>
      
-     <QrScanner/>
+     <QrScanner id="qrScanner-Section"/>
 
-     <Features/>
+     <Features id="Features-Section"/>
 
     </div>
 

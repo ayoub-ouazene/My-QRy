@@ -62,7 +62,7 @@
     display: flex;
     justify-content:space-between;
     align-items: center;
-    gap: 3rem;
+    gap: 3.5rem;
 }
 
 .Features-Section
@@ -72,6 +72,7 @@
 
     justify-content: space-between;
     gap: 3rem;
+    margin-bottom: 5rem;
 }
 
 .header4

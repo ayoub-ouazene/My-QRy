@@ -7,9 +7,13 @@ import {
 
 import './QrScanner.css'
 
+interface QrProps {
+  id: string;
+}
+
 type ViewMode = 'choice' | 'camera' | 'result';
 
-const QrScanner = () => {
+const QrScanner: React.FC<QrProps>  = ({id}) => {
   const [viewMode, setViewMode] = useState<ViewMode>('choice');
   const [scanResult, setScanResult] = useState<string | null>(null);
   const [isProcessingFile, setIsProcessingFile] = useState<boolean>(false);
@@ -156,7 +160,7 @@ const QrScanner = () => {
   );
 
   return (
-    <div className="container" id="qrScanner-Section">
+    <div className="container" id={id}>
       <div className="header3">
         <div className="logo3"></div>
         <div style={{display:"flex",flexDirection:"column",alignItems:"center"}}>
