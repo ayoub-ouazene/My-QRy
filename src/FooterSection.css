@@ -8,6 +8,7 @@
     border-top: 1px solid #c8d0e1;
     bottom: 0;
     height: 4rem;
+    width: 100%;
 
 }
 .footer p
@@ -27,4 +28,23 @@
     font-size: 2rem;
     font-weight: lighter;
     margin: 0;
+}
+
+
+@media (max-width:572px){
+    .footer
+    {
+        height: 3rem;
+
+    }
+
+    .footer p
+    {
+        font-weight: 400;
+    }
+    .footer h2
+    {
+        font-size: 1.5rem;
+        padding-bottom: 0.1rem;
+    }
 }

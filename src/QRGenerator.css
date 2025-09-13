@@ -63,12 +63,14 @@
 {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1rem;
   width: 40rem;
   border-radius: 1rem;
   border: solid #e5e7eb 1px;
   padding: 2rem;
-   box-shadow: 0 0.25rem 0.75rem  #e5e7eb;
+  box-shadow: 0 0.25rem 0.75rem  #e5e7eb;
+
 }
 
 .input-Container
@@ -110,7 +112,6 @@
 {
   background-color: #10b981 ;
   color: white;
-
   height: 3rem;
   font-size: large;
   border: none;
@@ -129,10 +130,10 @@
   border-radius: 0.3rem;
   border: #e5e7eb  solid 1px;
   
-  /* padding: 5px; */
+
   color: #797373;
    height: 2.5rem;
-   /* align-items: start; */
+
    display: flex;
    
    flex-direction: column; 
@@ -325,7 +326,7 @@
   top: -1.5rem;
   cursor: pointer;
   transition: border-color 0.2s ease-in-out;
-  width: 35rem;
+  /* width: 35rem; */
 }
 
 .custom-file-upload:hover {
@@ -411,4 +412,63 @@
 .QR-Result button:hover
 {
   background-color:#10b981;
+}
+
+
+@media (max-width:900px) {
+
+  .qrcode-generator-container
+  {
+    margin-top: 10rem;
+  }
+  .text2 h2
+  {
+    font-size: 2.1rem;
+    margin-top: 1.2rem;
+  }
+
+  .text2 p
+  {
+    font-size: 0.8rem;
+  }
+  .options
+  {
+    width: 30rem;
+  }
+
+  .input-Container input:focus
+  {
+    border: 2px 2px 3px #10b981;
+    
+  }
+
+  
+}
+
+@media (max-width:572px){
+
+  .text2 h2
+  {
+    font-size: 1.9rem;
+  }
+  .text2 p
+  {
+    font-size: 0.75rem;
+  }
+  .options{
+    width: 25rem;
+  }
+
+  .input-Container button{
+   
+    font-size: medium;
+  }
+  .custom-file-upload
+  {
+    width: 20rem;
+  }
+  .qrcode-generator-container
+  {
+    margin-top: 8rem;
+  }
 }

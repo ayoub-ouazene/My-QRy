@@ -13,3 +13,12 @@ body
   margin: 0;
 
 }
+
+
+@media (max-width:572px){
+
+  #root
+  {
+    display: flex;
+  }  
+}

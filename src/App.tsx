@@ -18,7 +18,7 @@ function App() {
 
   return(
 
- <div >
+ <div  >
    <Navbar/>
     <div style={{display:"flex", flexDirection:"column", alignItems:"center",justifyContent:"space-between",gap:"7rem"}}> 
 

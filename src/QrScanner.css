@@ -183,6 +183,62 @@
   padding: 1rem;
 }
 
+#html5-qrcode-button-camera-start 
+{
+  background-color: #009f6a;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem;
+  width: 16rem;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+
+}
+
+ #html5-qrcode-button-file-selection
+{
+  background-color: #009f6a;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem;
+  width: 16rem;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+
+}
+#html5-qrcode-button-camera-permission
+{
+  background-color: #009f6a;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem;
+  width: 16rem;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+
+}
+
+
+#html5-qrcode-button-camera-stop
+{
+   background-color: #009f6a;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem;
+  width: 19rem;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+
+
 #reader_dashboard button {
   background-color: #009f6a;
   color: white;
@@ -209,7 +265,7 @@
 }
 
 
-/* --- RESULT & OTHER VIEWS --- */
+
 
 .resultContainer {
   display: flex;
@@ -261,4 +317,36 @@
   font-size: 0.75rem;
   margin-top: 0.5rem;
   color: #6c757d;
+}
+
+
+@media (max-width:900px)
+{
+  .container
+  {
+    width: 28rem;
+  }
+
+  .header3 h1
+  {
+    font-size: 2.1rem ;
+  }
+}
+
+@media (max-width:572px)
+{
+
+  .container
+  {
+    width: 25rem;
+  }
+
+  .header3 h1
+  {
+    font-size: 1.9rem;
+  }
+  .header3 p
+  {
+    font-size: 0.75rem;
+  }
 }

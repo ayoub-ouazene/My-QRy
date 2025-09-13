@@ -69,7 +69,6 @@
 {
     display: flex;
     flex-direction: column;
-
     justify-content: space-between;
     gap: 3rem;
     margin-bottom: 5rem;
@@ -95,4 +94,70 @@
     max-width: 25rem;
     text-align: center;
     color: #797373;
+}
+
+
+@media (max-width:900px)
+{
+  .Features
+  {
+    gap: 0.8rem;
+    margin-left: 1rem;
+  }
+  .header4 h2
+  {
+    font-size: 1.8rem;
+  }
+
+  .header4 p
+  {
+    max-width: 22rem;
+    font-size: 0.85rem;
+  }
+  
+  .Feature p
+  {
+    font-size: 0.65rem;
+    max-width: 12rem;
+
+  }
+
+  .Feature h4
+  {
+    font-size: 1.1rem;
+  }
+    
+}
+
+@media (max-width:572px){
+
+  .Features{
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+  .Feature h4
+  {
+    font-size: 1.35rem;
+  }
+  .Feature p
+  {
+    font-size: 1rem;
+    max-width: 18rem;
+  }
+  .Features-Section
+  {
+    margin-bottom: 2rem;
+    gap:2rem;
+  }
+  .img1,.img2,.img3
+  {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .header4 h2
+  {
+    font-size: 1.7rem;
+  }
 }
