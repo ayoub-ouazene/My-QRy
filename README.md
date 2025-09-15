@@ -5,7 +5,7 @@
 
 MyQRy is a modern web app for generating and scanning QR codes. Create custom QR codes from URLs or text with color and logo options, or scan them via camera or file upload. Featuring a smooth, user-friendly UI with animations, it offers a complete and reliable QR solution.
 
-**[➡️ Live Demo (Add Your Link Here)](#)**
+**[➡️ Live Demo (https://my-qry.netlify.app/)](#)**
 
 ---
 
