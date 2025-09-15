@@ -6,11 +6,12 @@ import {motion} from 'framer-motion'
 import './QRGenerator.css'
 
 
+
 type QRImageSettings = {
   src: string;
   x?: number;
   y?: number;
-  height: number;
+  height: number;  
   width: number;
   excavate: boolean;
 };
@@ -121,10 +122,20 @@ const QRGenerator: React.FC<QrProps>  = ({id})=>{
 
 
 
-    return (
+    return ( 
  <div className="qrcode-generator-container" id={id}>
     
-      <div className="header">
+      <motion.div    
+      variants={{
+        hidden:{scale:0 ,y: 50 },
+        visible:{scale:1 ,y:0}
+      }}
+
+      initial="hidden"
+      animate="visible"
+      transition={{delay:0 , duration:0.3 ,ease:"easeInOut"}}
+      
+      className="header">
 
         <div className="logo2"></div>
         <div className="text2">
@@ -133,17 +144,23 @@ const QRGenerator: React.FC<QrProps>  = ({id})=>{
         </div>
        
 
-      </div>
+      </motion.div>
+
+      <motion.div className="options"
+      initial = {{y:3000 ,filter:"blur(8px)" }}
+      animate= {{ y:0 , filter:"blur(0px)"}}
+      transition={{delay:0 , duration:0.7}}
       
-      <div className="options">
+      >
 
         <div className="input-Container">
              <label><div className="url-logo"></div>Enter your URL</label>
-            <input ref={TextToEncode} placeholder="http://example.com" id="input"/>
-            <button  type="submit" onClick={handleSubmit}>Generate QR Code</button>
+            <motion.input  ref={TextToEncode} placeholder="http://example.com" id="input"/>
+            <motion.button whileTap={{scale:1.05}}type="submit" onClick={handleSubmit}>Generate QR Code</motion.button>
         </div>
 
-        <details className="details">
+          <motion.details className="details"      
+          >
 
             <summary className="summary" onClick={handleSummaryOpen} >
               
@@ -198,10 +215,10 @@ const QRGenerator: React.FC<QrProps>  = ({id})=>{
 
             </div>
 
-        </details>
+        </motion.details>
         
 
-      </div>
+      </motion.div>
 
 
      {generate ? <div className="QR-Result">

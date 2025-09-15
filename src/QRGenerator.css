@@ -140,6 +140,7 @@
    margin-bottom: 0.5rem;
    justify-content: center;
    cursor: pointer;
+   transition:  ease-in-out 0.5s ;
 }
 .details summary
 {
@@ -165,6 +166,7 @@
   display: flex;
   align-items: center;
   padding-bottom: 0.1rem;
+   transition:  ease-in-out 0.5s ;
 
 }
 .icon2
@@ -174,6 +176,7 @@
     justify-content: end;
     align-items: center;
     padding-bottom: 0.25rem;
+     transition:  ease-in-out 0.5s ;
 }
 
 
@@ -186,6 +189,7 @@
   font-size: 1rem;
   padding-left: 1rem;
   
+  
 }
 
 
@@ -197,6 +201,7 @@
   justify-content: flex-start;
   padding-top: 1rem;
   box-shadow: 1px 1px 10px #797373;
+   transition:  ease-in-out 0.5s ;
   
 
 
@@ -219,6 +224,7 @@
 .properties
 {
    margin: 0;
+    transition:  ease-in-out 0.7s ;
 
 
 }

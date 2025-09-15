@@ -1,4 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
+import {motion , AnimatePresence,  easeIn} from 'framer-motion'
+import { useInView } from "react-intersection-observer";
+
 import { 
   Html5QrcodeScanner, 
   Html5Qrcode,
@@ -19,6 +22,8 @@ const QrScanner: React.FC<QrProps>  = ({id}) => {
   const [isProcessingFile, setIsProcessingFile] = useState<boolean>(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  const [ref, inView] = useInView({ threshold: 0.5});
+
   // --- useEffect HOOK for Camera ---
   useEffect(() => {
     if (viewMode !== 'camera') return;
@@ -26,10 +31,11 @@ const QrScanner: React.FC<QrProps>  = ({id}) => {
     const onScanSuccess = (decodedText: string, decodedResult: Html5QrcodeResult) => {
       setScanResult(decodedText);
       setViewMode('result');
+      console.log(decodedResult);
     };
 
     const onScanError = (errorMessage: string) => {
-      // This is for the live camera feed, we can ignore continuous errors
+     console.log(errorMessage);
     };
 
     const html5QrcodeScanner = new Html5QrcodeScanner(
@@ -100,25 +106,34 @@ const QrScanner: React.FC<QrProps>  = ({id}) => {
       <p className="feedbackText">Processing image...</p>
     ) : (
       <div className="choiceContainer">
-        <button onClick={() => setViewMode('camera')} className="primaryButton1">
+        <motion.button onClick={() => setViewMode('camera')} className="primaryButton1"
+          initial={{scale:1}}
+          whileHover={{scale:1.1}}
+          transition={{duration:0.2 , delay:0}}
+
+          >
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 20 25">
               <path d="M9.4 4.2 8.2 6H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-3.2l-1.2-1.8a1 1 0 0 0-.8-.4h-4a1 1 0 0 0-.8.4zM12 17a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
             </svg>
             Scan using Camera
-        </button>
+        </motion.button>
         
         <div className="separator"> 
           <span className="orText">OR</span>
         </div>
         
-        <button onClick={() => fileInputRef.current?.click()} className="primaryButton2">
+        <motion.button onClick={() => fileInputRef.current?.click()} className="primaryButton2"
+           initial={{scale:1}}
+          whileHover={{scale:1.1}}
+          transition={{duration:0.2 , delay:0}}
+          >
           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="17 8 12 3 7 8"></polyline>
             <line x1="12" y1="3" x2="12" y2="15"></line>
           </svg>
           Scan from File
-        </button>
+        </motion.button>
         <input
           type="file"
           ref={fileInputRef}
@@ -135,9 +150,12 @@ const QrScanner: React.FC<QrProps>  = ({id}) => {
     <>
       <div className='BeforeStartContainer'>
         <div id="reader" className="cameraReader"></div>
-        <button onClick={() => setViewMode('choice')} className="secondaryButton">
+        <motion.button onClick={() => setViewMode('choice')} className="secondaryButton"
+          whileHover={{rotate:1 , scale:0.9}}
+          transition={{duration:0.2 , ease:easeIn}}
+          >
           Cancel
-        </button>
+        </motion.button>
       </div>
     </>
   );
@@ -160,7 +178,21 @@ const QrScanner: React.FC<QrProps>  = ({id}) => {
   );
 
   return (
-    <div className="container" id={id}>
+
+  <AnimatePresence> 
+    <motion.div className="container" id={id}
+     ref={ref} 
+    initial={{scale:0 , filter :"blur(10px)"}}
+    // whileInView={{scale:1 , filter:"blur(0px)"}}
+    animate={
+      inView?
+      {scale:1 , filter:"blur(0px)"}:
+      {scale:0 , filter :"blur(10px)"}
+    }
+    viewport={{amount:0.1 }}
+    transition={{duration:0.5 , delay:0.1 ,ease:"easeOut"}}
+    
+    >
       <div className="header3">
         <div className="logo3"></div>
         <div style={{display:"flex",flexDirection:"column",alignItems:"center"}}>
@@ -177,7 +209,9 @@ const QrScanner: React.FC<QrProps>  = ({id}) => {
         <h5>Supported formats</h5>
         <p>JPG, PNG, GIF, WebP • Max size: 10MB</p>
       </div>
-    </div>
+    </motion.div>
+
+  </AnimatePresence>  
   );
 };
 

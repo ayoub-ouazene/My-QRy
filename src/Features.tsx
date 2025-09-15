@@ -1,6 +1,7 @@
 
 import "./Features.css"
 import Feature from "./components/Feature.tsx"
+import {motion} from 'framer-motion'
 
 
 interface QrProps {
@@ -10,7 +11,11 @@ interface QrProps {
 
 const Features:React.FC<QrProps> = ({id})=>{
   return (
-    <div className="Features-Section" id={id}>
+    <motion.div className="Features-Section" id={id}
+    initial={{scale:0, filter:"blur(10px)"}}
+     whileInView={{scale:1 , filter:"blur(0px)"}}
+     transition={{duration:0.3}}
+    >
       <div className="header4">
 
         <h2>Why Choose MyQRy CODE?</h2>
@@ -26,7 +31,7 @@ const Features:React.FC<QrProps> = ({id})=>{
 
       </div>
 
-    </div>
+    </motion.div>
   )
 }
 

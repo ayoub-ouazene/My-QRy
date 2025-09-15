@@ -1,10 +1,21 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect  } from 'react';
 import { Link, Events } from 'react-scroll';
 import './Navbar.css';
 
+
+
+
 const Navbar = () => {
+
+
+
+ 
+
     const [isScrolled, setIsScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState('qrcode-generator-Section');
+
+
+   
 
     useEffect(() => {
         const sectionIds = [
@@ -57,8 +68,10 @@ const Navbar = () => {
         };
     }, []);
 
+
     return (
-        <div className={isScrolled ? "navbar-scroll" : "navbar"}>
+        <>
+        <div  className={isScrolled ? "navbar-scroll" : "navbar"}>
             <div className="logoInfo">
                 <div className="logo"></div>
                 <div className="text">
@@ -104,6 +117,8 @@ const Navbar = () => {
                 </ul>
             </div>
         </div>
+
+        </>
     );
 };
 

@@ -10,16 +10,16 @@ import FooterSection from "./FooterSection.tsx";
 
 
 
-
 function App() {
-
-  
+   
 
 
   return(
 
  <div  >
    <Navbar/>
+
+
     <div style={{display:"flex", flexDirection:"column", alignItems:"center",justifyContent:"space-between",gap:"7rem"}}> 
 
     <QRGenerator id="qrcode-generator-Section"/>
