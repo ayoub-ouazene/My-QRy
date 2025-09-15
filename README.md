@@ -9,8 +9,6 @@ MyQRy is a modern web app for generating and scanning QR codes. Create custom QR
 
 ---
 
-![MyQRy Screenshot](https://via.placeholder.com/800x450.png?text=MyQRy+Application+Screenshot)
-*(Replace this placeholder with a real screenshot or GIF of your application)*
 
 ## ✨ Features
 
