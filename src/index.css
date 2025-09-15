@@ -4,7 +4,10 @@ html
 {
   font-size: 16px;
   font-family: 'Geist Sans', sans-serif ;
-  scrollbar-width: none;
+  /* scrollbar-width: none; */
+   /* width: 100%;  */
+overflow-x: hidden;
+
 
 }
 
@@ -21,4 +24,8 @@ body
   {
     display: flex;
   }  
+  html
+  {
+    font-size: 13px;
+  }
 }
